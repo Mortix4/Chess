@@ -1,0 +1,46 @@
+title Chess Game Sequence Diagram
+
+participant Player1
+participant Player2
+participant ChessBoard
+
+Player1->ChessBoard: Make a move
+activate ChessBoard
+ChessBoard->ChessBoard: Validate move
+alt
+    ChessBoard->Player1: Invalid move
+else
+    ChessBoard->Player2: Notify of the move
+    activate Player2
+    Player2->Player2: Analyze the board and plan next move
+    Player2->ChessBoard: Make a move
+    activate ChessBoard
+    ChessBoard->ChessBoard: Validate move
+    alt
+        ChessBoard->Player2: Invalid move
+    else
+        ChessBoard->Player1: Notify of the move
+        activate Player1
+        Player1->Player1: Analyze the board and plan next move
+    end
+end
+ChessBoard->ChessBoard: Update the board
+ChessBoard->Player1: Send board state
+Player1->Player1: Analyze the board and plan next move
+Player1->ChessBoard: Make a move
+activate ChessBoard
+ChessBoard->ChessBoard: Validate move
+alt
+    ChessBoard->Player1: Invalid move
+else
+    ChessBoard->Player2: Notify of the move
+    activate Player2
+    Player2->Player2: Analyze the board and plan next move
+end
+ChessBoard->ChessBoard: Update the board
+ChessBoard->ChessBoard: Check for checkmate or stalemate
+alt
+    ChessBoard->Player1: Checkmate
+else
+    ChessBoard->Player2: Checkmate
+end

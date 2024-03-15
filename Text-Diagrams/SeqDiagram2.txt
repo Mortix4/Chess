@@ -1,0 +1,94 @@
+title Chess Game Sequence
+
+participant Player1 as P1
+participant Player2 as P2
+participant Backend as B
+participant Graphics as G
+
+P1 -> G: Start Game
+G -> B: Request New Game
+B -> G: New Game Initialized
+G -> P1: Show Board
+P1 -> G: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P1: Highlight Valid Moves
+P1 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P2: Update Board
+P2 -> G: Review Board
+G -> P2: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P2: Highlight Valid Moves
+P2 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P1: Update Board
+P1 -> G: Review Board
+G -> P1: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P1: Highlight Valid Moves
+P1 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P2: Update Board
+P2 -> G: Review Board
+G -> P2: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P2: Highlight Valid Moves
+P2 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P1: Update Board
+P1 -> G: Review Board
+G -> P1: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P1: Highlight Valid Moves
+P1 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P2: Update Board
+P2 -> G: Review Board
+G -> P2: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P2: Highlight Valid Moves
+P2 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P1: Update Board
+P1 -> G: Review Board
+G -> P1: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P1: Highlight Valid Moves
+P1 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P2: Update Board
+P2 -> G: Review Board
+G -> P2: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P2: Highlight Valid Moves
+P2 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P1: Update Board
+P1 -> G: Review Board
+G -> P1: Select Piece
+G -> B: Request Valid Moves for Piece
+B -> G: Valid Moves for Piece
+G -> P1: Highlight Valid Moves
+P1 -> G: Select Destination Square
+G -> B: Request Move
+B -> G: Move Accepted
+G -> P2: Update Board
+P2 -> G: Review Board
+G -> P2: Select Piece
+G -> B: Request

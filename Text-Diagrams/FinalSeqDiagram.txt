@@ -1,0 +1,29 @@
+title Chess Game Sequence Diagram
+
+participant Frontend
+participant Backend
+
+Frontend->Backend: Start new game
+
+loop Game loop
+    Frontend->Backend: Request available moves
+    Backend->Frontend: List of available moves
+    Frontend->Backend: Request to make move
+    Backend->Backend: Validate move
+    alt Legal move
+        Backend->Frontend: Move is legal
+        Backend->Backend: Update game state
+        Frontend->Backend: Confirm move
+        Backend->Backend: Update game state
+        Backend->Frontend: New game state
+    else Illegal move
+        Backend->Frontend: Move is illegal
+        Frontend->Backend: Request to make new move
+    end
+end
+
+Frontend->Backend: End game
+Backend->Frontend: Game results
+
+note left of Backend: Backend is responsible for\nvalidating moves and updating game state
+note right of Frontend: Frontend is responsible for\nrequesting moves and displaying game state
