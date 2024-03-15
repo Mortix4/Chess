@@ -5,9 +5,7 @@ This project is a Chess game implementation with a C++ backend and a C# GUI. It 
 ## Features
 
 - Play Chess against another human player
-- Play Chess against the computer (AI opponent)
 - Customizable game settings (e.g., difficulty level, board theme)
-- Save and load game progress
 - Interactive graphical interface for an enhanced gaming experience
 
 ## Prerequisites
@@ -21,15 +19,13 @@ This project is a Chess game implementation with a C++ backend and a C# GUI. It 
 1. Clone the repository to your local machine.
 2. Open the C++ project in Visual Studio and build the solution.
 3. Open the C# project in Visual Studio and build the solution.
-4. Run the executable file generated from the C# project to launch the Chess game.
+4. Run the executable file generated from the C# project to launch the Chess game then Run the executable file generated from the C++ to play.
 
 ## Usage
 
 1. Launch the Chess game application.
-2. Choose the game mode (player vs. player or player vs. AI).
-3. Customize game settings if desired (e.g., difficulty level, board theme).
-4. Start playing Chess by making moves using the graphical interface.
-5. Save and load game progress as needed.
+2. Customize game settings if desired (e.g., difficulty level, board theme).
+3. Start playing Chess by making moves using the graphical interface.
 
 ## Contributing
 
